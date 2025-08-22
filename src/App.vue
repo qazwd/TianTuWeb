@@ -1,14 +1,14 @@
 <template>
-  <CoreProduct/>
+  <HomePage/>
 </template>
 
 <script>
-import CoreProduct from './components/CoreProduct/CoreProduct.vue'
+import HomePage from './components/HomePage/index.vue'
 
 export default {
   name: 'App',
   components: {
-    CoreProduct
+    HomePage
   }
 }
 </script>

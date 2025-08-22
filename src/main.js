@@ -2,7 +2,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 
 // 导入路由
-//import router from './router'
+import router from './components/router/router.js'
 
 // 导入包
 import ElementPlus from 'element-plus'  // 导入element-plus组件库
@@ -17,5 +17,5 @@ app.use(ElementPlus)
 for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
   app.component(key, component)
 }
-//app.use(router)
+app.use(router)
 app.mount('#app')

@@ -1,5 +1,6 @@
 {
-  "name": "source",
+  "name": "tiantu-yaogan",
+  "description": "湖北天图遥感科技有限公司",
   "version": "0.1.0",
   "private": true,
   "scripts": {
