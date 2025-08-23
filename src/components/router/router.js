@@ -12,50 +12,64 @@ import NotFound from '@/components/404.vue'
 
 const routes = [
   {
-    // 首页
-    path: '/Home',
-    name: 'HomePage',
-    component: HomePage
-  },
-  {
-    path: '/RemoteSensingData',
-    name: 'RemoteSensingDataPage',
-    component: RemoteSensingData
-  },
-  {
-    path: '/ArtificialIntelligence',
-    name: 'ArtificialIntelligencePage',
-    component: ArtificialIntelligence
-  },
-  {
-    path: '/LowAltitudeEconomic',
-    name: 'LowAltitudeEconomicPage',
-    component: LowAltitudeEconomic
-  },
-  {
-    path: '/CoreProduct',
-    name: 'CoreProductPage',
-    component: CoreProduct
-  },
-  {
-    path: '/AboutUs',
-    name: 'AboutUsPage',
-    component: AboutUs
-  },
-  {
+    // 添加默认路由重定向到首页
     path: '/',
     redirect: '/home'
   },
   {
+    // 首页
+    path: '/homePage',
+    name: 'HomePage',
+    component: HomePage
+  },
+  {
+    // 遥感数据服务
+    path: '/remoteSensingData',
+    name: 'RemoteSensingDataPage',
+    component: RemoteSensingData
+  },
+  {
+    // 人工智能服务
+    path: '/artificialIntelligence',
+    name: 'ArtificialIntelligencePage',
+    component: ArtificialIntelligence
+  },
+  {
+    // 低空经济服务
+    path: '/lowAltitudeEconomic',
+    name: 'LowAltitudeEconomicPage',
+    component: LowAltitudeEconomic
+  },
+  {
+    // 核心产品
+    path: '/coreProduct',
+    name: 'CoreProductPage',
+    component: CoreProduct
+  },
+  {
+    // 关于我们
+    path: '/aboutUs',
+    name: 'AboutUsPage',
+    component: AboutUs
+  },
+  {
+    // 404页面
     path: '/:pathMatch(.*)*',
-    name: 'NotFound',
+    name: '404',
     component: NotFound
   }
 ]
 
 const router = createRouter({
   history: createWebHistory(),
-  routes
+  routes,
+  // 添加滚动行为配置
+  scrollBehavior(to, from, savedPosition) {
+    // 每次路由切换时滚动到顶部
+    // return { top: 0 }
+    // 如果需要支持浏览器前进/后退保留滚动位置，可以使用：
+    return savedPosition || { top: 0 }
+  }
 })
 
 export default router

@@ -1,26 +1,36 @@
 <template>
   <div class="core-product-page">
     <div class="title-bar">
-      <div class="l">
-        <router-link to="/Home">
-          <img src="@/assets/logo.png" alt="" />
+      <div class="title-bar-left">
+        <router-link to="/homePage">
+          <img src="@/assets/logo.png" alt="天图遥感" />
         </router-link>
       </div>
-      <div class="r">
-        <div>
-          <router-link to="/RemoteSensingData">遥感数据服务</router-link>
+      <div class="title-bar-right">
+        <div class="title-bar-right-item1">
+          <router-link to="/remoteSensingData"
+            >遥感数据服务
+          </router-link>
         </div>
-        <div>
-          <router-link to="/ArtificialIntelligence">人工智能服务</router-link>
+        <div class="title-bar-right-item2">
+          <router-link to="/artificialIntelligence"
+            >人工智能服务
+          </router-link>
         </div>
-        <div>
-          <router-link to="/LowAltitudeEconomic">低空经济服务</router-link>
+        <div class="title-bar-right-item3">
+          <router-link to="/lowAltitudeEconomic"
+            >低空经济服务
+          </router-link>
         </div>
-        <div class="active">
-          <router-link to="/CoreProduct">核心产品</router-link>
+        <div id="current-page-button-highlight">
+          <router-link to="/coreProduct" 
+            >核心产品
+          </router-link>
         </div>
-        <div>
-          <router-link to="/AboutUs">关于我们</router-link>
+        <div class="title-bar-right-item5">
+          <router-link to="/aboutUs"
+            >关于我们
+          </router-link>
         </div>
       </div>
     </div>
@@ -126,6 +136,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
+#current-page-button-highlight {
+  background: radial-gradient(circle at center, #B3EAFF 0%, #1B1C63 50%);
+}
+
 p {
   text-indent: 2em;
   white-space: pre-wrap;
@@ -136,55 +150,58 @@ span {
 }
 
 .core-product-page {
-  max-width: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  overflow-y: auto;
 
   .title-bar {
-    height: 150px;
     width: 100%;
-    background-color: #1B1C63;
     display: flex;
-    align-items: center;
-    gap: 2rem;
-    padding: 0% 7% 0% 5%;
+    justify-content: space-between;
+    background-color: #1B1C63;
 
-    img {
-      height: 170px;
-      width: auto;
+    .title-bar-left {
+      width: 20%;
       display: flex;
-      align-items: center;
-      left: 0;
-    }
 
-    .r {
-      position: absolute;
-      right: 0;
-
-      .active {
-        background-color: #B3EAFF;
-        color: #000000;
-
-        router-link {
-          color: #000000;
-        }
+      img  {
+        width: 50%;
       }
     }
 
-    div:not(.logo) {
-      height: 100%;
-      width: auto;
+    .title-bar-right {
+      width: 80%;
       display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: auto 20px;
-    }
+      justify-content: space-evenly;
 
-    router-link {
-      color: #ffffff;
-      margin: auto 10px;
+      .title-bar-right-item1, .title-bar-right-item2, .title-bar-right-item3, 
+      #current-page-button-highlight, .title-bar-right-item5 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        a {
+          color: white;
+          text-decoration: none;
+          outline: none;
+          transition: all 0.2s ease-in-out;
+          font-size: 1.2rem;
+
+          &:hover {
+            color: #B3EAFF;
+          }
+
+          &:focus {
+            color: #00b7ff;
+          }
+
+          &:active {
+            color: #ffffff;
+            background-color: #1B1C63;
+          }
+        }
+      }
     }
   }
 
