@@ -1,39 +1,6 @@
 <template>
   <div class="core-product-page">
-    <div class="title-bar">
-      <div class="title-bar-left">
-        <router-link to="/homePage">
-          <img src="@/assets/logo.png" alt="天图遥感" />
-        </router-link>
-      </div>
-      <div class="title-bar-right">
-        <div class="title-bar-right-item1">
-          <router-link to="/remoteSensingData"
-            >遥感数据服务
-          </router-link>
-        </div>
-        <div class="title-bar-right-item2">
-          <router-link to="/artificialIntelligence"
-            >人工智能服务
-          </router-link>
-        </div>
-        <div class="title-bar-right-item3">
-          <router-link to="/lowAltitudeEconomic"
-            >低空经济服务
-          </router-link>
-        </div>
-        <div id="current-page-button-highlight">
-          <router-link to="/coreProduct" 
-            >核心产品
-          </router-link>
-        </div>
-        <div class="title-bar-right-item5">
-          <router-link to="/aboutUs"
-            >关于我们
-          </router-link>
-        </div>
-      </div>
-    </div>
+    <TitleBar />
     <div class="core-product">
       <img src="@/assets/核心产品图.png" alt="加载失败" class="core" />
       <span class="span1">核心产品</span>
@@ -109,10 +76,17 @@
 </template>
 
 <script>
+// 导入模块
 import { ref } from 'vue';
+// 导入组件
+import TitleBar from '@/components/WebPage/PageComponents/TitleBar.vue'
+
 
 export default {
   name: 'CoreProduct',
+  components: {
+    TitleBar
+  },
   props: {
   },
   setup() {
@@ -136,9 +110,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
-#current-page-button-highlight {
-  background: radial-gradient(circle at center, #B3EAFF 0%, #1B1C63 50%);
-}
 
 p {
   text-indent: 2em;

@@ -14,7 +14,7 @@ const routes = [
   {
     // 添加默认路由重定向到首页
     path: '/',
-    redirect: '/home'
+    redirect: '/homePage'
   },
   {
     // 首页
