@@ -17,5 +17,7 @@ export default {
 <style scoped>
   h1 {
     color: rgb(0, 0, 0);
+    font-size: 100px;
+    font-weight: bold;
   }
 </style>
