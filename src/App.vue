@@ -1,7 +1,9 @@
 <template>
-  <transition name="page-transition">
-    <RouterView/>
-  </transition>
+  <router-view v-slot="{ Component }">
+    <transition name="page-transition" mode="out-in">
+      <component :is="Component" />
+    </transition>
+  </router-view>
 </template>
 
 <script>
@@ -15,6 +17,8 @@ export default {
 html, body {
   margin: 0;
   padding: 0;
+  /* overflow-x: hidden; 防止页面横向滚动 */
+  overflow-y: auto; /* 允许纵向滚动 */
 }
 
 #app {
@@ -27,21 +31,20 @@ html, body {
 }
 
 /* 路由过渡动画样式 */
-.page-transition-enter-from,
+.page-transition-enter-from, 
 .page-transition-leave-to {
   opacity: 0;
-  transform: translateY(10px); /* 轻微下移增强过渡感 */
 }
 
-.page-transition-enter-active,
+.page-transition-enter-active, 
 .page-transition-leave-active {
-  transition: all 0.3s ease-out; /* 过渡时间0.3s，缓动效果更自然 */
+  transition: opacity 0.3s ease-out; /* 仅过渡透明度，时间0.5s，缓动效果更自然 */
+  will-change: opacity;
 }
 
-.page-transition-enter-to,
+.page-transition-enter-to, 
 .page-transition-leave-from {
-  opacity: 1;
-  transform: translateY(0);
+  opacity: 1; /* 完全不透明 */
 }
 
 </style>

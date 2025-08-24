@@ -64,12 +64,12 @@ const router = createRouter({
   history: createWebHistory(),
   routes,
   // 添加滚动行为配置
-  scrollBehavior(to, from, savedPosition) {
-    // 每次路由切换时滚动到顶部
-    // return { top: 0 }
-    // 如果需要支持浏览器前进/后退保留滚动位置，可以使用：
-    return savedPosition || { top: 0 }
-  }
+  // scrollBehavior(to, from, savedPosition) {
+  //   // 每次路由切换时滚动到顶部
+  //   // return { top: 0 }
+  //   // 如果需要支持浏览器前进/后退保留滚动位置，可以使用：
+  //   return savedPosition || { top: 0 }
+  // }
 })
 
 export default router

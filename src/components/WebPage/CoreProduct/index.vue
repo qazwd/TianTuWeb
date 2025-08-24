@@ -126,56 +126,6 @@ span {
   flex-direction: column;
   justify-content: center;
 
-  .title-bar {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    background-color: #1B1C63;
-
-    .title-bar-left {
-      width: 20%;
-      display: flex;
-
-      img  {
-        width: 50%;
-      }
-    }
-
-    .title-bar-right {
-      width: 80%;
-      display: flex;
-      justify-content: space-evenly;
-
-      .title-bar-right-item1, .title-bar-right-item2, .title-bar-right-item3, 
-      #current-page-button-highlight, .title-bar-right-item5 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        a {
-          color: white;
-          text-decoration: none;
-          outline: none;
-          transition: all 0.2s ease-in-out;
-          font-size: 1.2rem;
-
-          &:hover {
-            color: #B3EAFF;
-          }
-
-          &:focus {
-            color: #00b7ff;
-          }
-
-          &:active {
-            color: #ffffff;
-            background-color: #1B1C63;
-          }
-        }
-      }
-    }
-  }
-
   .core-product {
     height: 550px;
     max-width: 100%;

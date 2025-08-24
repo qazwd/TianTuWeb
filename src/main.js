@@ -8,7 +8,7 @@ import router from './components/router/router.js'
 import ElementPlus from 'element-plus'  // 导入element-plus组件库
 import 'element-plus/dist/index.css'    // 导入element-plus样式
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'    // 导入element-plus图标
-import '@/assets/styles/global.css' // 导入全局滚动条样式
+import './assets/styles/global.css' // 导入全局滚动条样式
 
 //createApp(App).mount('#app')
 const app = createApp(App)
