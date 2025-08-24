@@ -118,7 +118,7 @@ export default {
       .dropdown {
         position: relative;
         display: inline-block;
-        box-sizing: border-box;
+        // box-sizing: border-box;
         padding: 0;
         margin: 0;
 
@@ -129,14 +129,14 @@ export default {
           min-width: 160px;
           box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
           z-index: 1;
-          box-sizing: border-box;
+          // box-sizing: border-box;
 
           .dropdown-item {
             color: black;
             padding: 12px 16px;
             text-decoration: none;
             display: block;
-            box-sizing: border-box;
+            // box-sizing: border-box;
 
             &:hover {
               background-color: #f1f1f1;
@@ -153,16 +153,16 @@ export default {
           // width: 100%;
           display: flex;
           align-items: center;
-          box-sizing: border-box;
+          // box-sizing: border-box;
           padding: 0;
           margin: 0;
           // background: radial-gradient(ellipse at center, #B3EAFF 0%, #1B1C63 60%);
 
           .title-text {
-            min-width: 6em;
+            // min-width: 7em;
             // width: fit-content;
             color: #006aff !important; // 确保标题文字颜色生效
-            box-sizing: border-box;
+            // box-sizing: border-box;
             padding: 0;
             margin: 0;
           }
@@ -174,7 +174,7 @@ export default {
         display: flex;
         justify-content: center;
         align-items: center;
-        box-sizing: border-box;
+        // box-sizing: border-box;
         padding: 0;
         margin: 0;
 
@@ -184,10 +184,10 @@ export default {
           outline: none;
           // transition: color 0.2s ease-in-out;
           font-size: 1.2rem;
-          box-sizing: border-box;
+          // box-sizing: border-box;
           padding: 0;
           margin: 0;
-          min-width: 6em;
+          // min-width: 7em;
           // width: fit-content;
 
           &:hover {
