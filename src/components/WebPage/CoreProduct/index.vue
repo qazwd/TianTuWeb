@@ -2,18 +2,18 @@
   <div class="core-product-page">
     <TitleBar />
     <div class="core-product">
-      <img src="@/assets/核心产品图.png" alt="加载失败" class="core" />
+      <img src="@/assets/images/core-product-img.png" alt="天图遥感" class="core" />
       <span class="span1">核心产品</span>
       <span class="span2">机载轻小型高光谱成像系统</span>
     </div>
     <div class="product-introduction">
       <span>产品介绍</span>
       <p v-for="(paragraph, index) in content1" :key="index">{{ paragraph }}</p>
-      <img src="@/assets/系统组成图.png" alt="加载失败" />
-      <p><br>注：地面数据控制单元需额外搭配一台控制电脑（笔记本等），不在系统提供范围内</p>
+      <img src="@/assets/images/system-composition.png" alt="天图遥感" />
+      <p class="note"><br>注：地面数据控制单元需额外搭配一台控制电脑（笔记本等），不在系统提供范围内</p>
       <div class="picture2">
-        <img src="@/assets/产品组成图.png" alt="加载失败" />
-        <img src="@/assets/产品组成图-地面端.png" alt="加载失败" />
+        <img src="@/assets/images/product-composition-mobile.png" alt="天图遥感" />
+        <img src="@/assets/images/product-composition-ground.png" alt="天图遥感" />
       </div>
     </div>
     <div class="partitioned"></div>
@@ -21,26 +21,25 @@
       <span>系统组成</span>
       <div class="content">
         <div class="left">
-        <img src="@/assets/产品图1.png" alt="加载失败" />
-        <img src="@/assets/产品图2.png" alt="加载失败" />
-        <img src="@/assets/产品图3.png" alt="加载失败" />
-        <img src="@/assets/产品图4.png" alt="加载失败" />
+        <img src="@/assets/images/product-1.png" alt="天图遥感" />
+        <img src="@/assets/images/product-2.png" alt="天图遥感" />
+        <img src="@/assets/images/product-3.png" alt="天图遥感" />
+        <img src="@/assets/images/product-4.png" alt="天图遥感" />
       </div>
       <div class="right">
         <div class="top">
-          <img src="@/assets/技术参数1.png" alt="加载失败" />
-          <p>高光谱成像光谱仪</p>
+          <img src="@/assets/images/technical-parameters-1.png" alt="天图遥感" />
+          <p class="name">高光谱成像光谱仪</p>
         </div>
         <div class="middle">
-          <img src="@/assets/技术参数2.png" alt="加载失败" />
-          <p>数据采集存储单元</p>
+          <img src="@/assets/images/technical-parameters-2.png" alt="天图遥感" />
+          <p class="name">数据采集存储单元</p>
         </div>
         <div class="bottom">
-          <img src="@/assets/技术参数3.png" alt="加载失败" />
-          <p>两轴自稳云台</p>
+          <img src="@/assets/images/technical-parameters-3.png" alt="天图遥感" />
+          <p class="name">两轴自稳云台</p>
         </div>
       </div>
-      
       </div>
     </div>
     <div class="partitioned"></div>
@@ -70,7 +69,7 @@
     <!-- <div class="partitioned"></div> -->
     <div class="product-inventory">
       <span>产品清单</span>
-      <img src="@/assets/产品清单.png" alt="加载失败" />
+      <img src="@/assets/images/product-inventory.png" alt="天图遥感" />
     </div>
   </div>
 </template>
@@ -111,14 +110,20 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 
-p {
-  text-indent: 2em;
-  white-space: pre-wrap;
-}
-
 span {
   font-weight: bold;
 }
+
+p {
+  text-indent: 2em;
+  white-space: pre-wrap;
+  text-align: justify;
+}
+
+.note, .name p {
+    text-align: center !important;
+}
+
 
 .core-product-page {
   width: 100%;

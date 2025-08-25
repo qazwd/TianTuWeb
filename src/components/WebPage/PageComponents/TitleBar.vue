@@ -4,7 +4,7 @@
       <router-link :class="{ 'home-logo-highlight': $route.path === '/homePage' }" to="/homePage">
         <!-- 为首页图片添加高亮类名 -->
         <img 
-          :src="$route.path === '/homePage' ? require('@/assets/logo-highlight.png') : require('@/assets/logo.png')"
+          :src="$route.path === '/homePage' ? require('@/assets/images/logo-highlight.png') : require('@/assets/images/logo.png')"
           alt="天图遥感" 
         />
       </router-link>
