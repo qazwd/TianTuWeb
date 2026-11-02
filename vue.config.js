@@ -1,5 +1,6 @@
 const { defineConfig } = require('@vue/cli-service')
 module.exports = defineConfig({
+  publicPath: '/TianTuWeb/',
   transpileDependencies: true,
   chainWebpack: config => {
     config.plugin('html').tap(args => {

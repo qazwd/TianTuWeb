@@ -61,7 +61,7 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory('/TianTuWeb/'),
   routes,
   // 添加滚动行为配置
   // scrollBehavior(to, from, savedPosition) {
