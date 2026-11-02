@@ -1,8 +1,8 @@
 name: Deploy static content to Pages
 on:
   push:
-    branches: ['main'] # 推送到main分支触发打包部署
-  workflow_dispatch: # 支持手动在Actions页面点运行
+    branches: ['main']
+  workflow_dispatch:
 permissions:
   contents: read
   pages: write
@@ -32,3 +32,7 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        # ========== 这一行是修复404的关键！ ==========
+        environment:
+          name: github-pages
+          url: ${{ steps.deployment.outputs.page_url }}
